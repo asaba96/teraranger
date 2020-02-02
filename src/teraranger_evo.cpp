@@ -20,7 +20,7 @@ TerarangerEvo::TerarangerEvo()
   ROS_INFO("[%s] sensor name: %s", ros::this_node::getName().c_str(), sensor_name_.c_str());
 
   //Publishers
-  range_publisher_ = nh_.advertise<sensor_msgs::Range>("teraranger_evo/" + sensor_name_, 2);
+  range_publisher_ = nh_.advertise<sensor_msgs::Range>("teraranger_evo", 2);
 
   // Serial Port init
   serial_port_.setPort(portname_);
